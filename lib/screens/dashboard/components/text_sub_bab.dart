@@ -13,7 +13,7 @@ class TextSubBab extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding),
+      padding: const EdgeInsets.only(left: 20, right: 20, top: 5, bottom: 1),
       child: Row(
         children: [
           Container(
@@ -33,7 +33,7 @@ class TextSubBab extends StatelessWidget {
           ),
           Spacer(),
           Container(
-            padding: EdgeInsets.only(top: 8),
+            padding: EdgeInsets.only(top: 9),
             height: 35,
             child: Stack(
               children: <Widget>[
