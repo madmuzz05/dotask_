@@ -30,7 +30,7 @@ class HeaderDashboard extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        'welcome',
+                        'Welcome',
                         style: TextStyle(
                             fontFamily: "Poppins",
                             fontSize: 14,
