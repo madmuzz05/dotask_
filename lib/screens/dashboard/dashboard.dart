@@ -33,28 +33,30 @@ class DashBoard extends StatelessWidget {
             Expanded(
                 child: Stack(
               children: <Widget>[
-                ListView(children: <Widget>[
-                  TaskList(
-                      title: "Menyapu rumah",
-                      time: "06:30 - 06:31",
-                      category: "Home",
-                      color1: 0xFFDA1E37),
-                  TaskList(
-                      title: "Membuat donat",
-                      time: "06:31 - 07:30",
-                      category: "Home",
-                      color1: 0xFF0EAD69),
-                  TaskList(
-                      title: "Berjualan donat",
-                      time: "07:30 - 15:30",
-                      category: "Work",
-                      color1: 0xFF0EAD69),
-                  TaskList(
-                      title: "Berjualan mie ayam",
-                      time: "14:00 - 22:30",
-                      category: "Work",
-                      color1: 0xFFFF9505),
-                ]),
+                ListView(
+                  children: <Widget>[
+                    TaskList(
+                        title: "Menyapu rumah",
+                        time: "06:30 - 06:31",
+                        category: "Home",
+                        color1: 0xFFDA1E37),
+                    TaskList(
+                        title: "Membuat donat",
+                        time: "06:31 - 07:30",
+                        category: "Home",
+                        color1: 0xFF0EAD69),
+                    TaskList(
+                        title: "Berjualan donat",
+                        time: "07:30 - 15:30",
+                        category: "Work",
+                        color1: 0xFF0EAD69),
+                    TaskList(
+                        title: "Berjualan mie ayam",
+                        time: "14:00 - 22:30",
+                        category: "Work",
+                        color1: 0xFFFF9505),
+                  ],
+                ),
                 BottomNavigation(
                   home: "assets/icons/home1.png",
                   list: "assets/icons/list.png",

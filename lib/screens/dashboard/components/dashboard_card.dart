@@ -88,9 +88,9 @@ class DashBoarCard extends StatelessWidget {
                           Image.asset("assets/icons/d2.png"),
                           Spacer(),
                           Text(
-                            "Pending",
+                            "Bookmark",
                             style: TextStyle(
-                                fontSize: 18,
+                                fontSize: 17,
                                 fontFamily: "Poppins",
                                 fontWeight: FontWeight.w500,
                                 color: Colors.white),
@@ -149,7 +149,7 @@ class DashBoarCard extends StatelessWidget {
                                 color: Colors.white),
                           ),
                           Text(
-                            "10 Task",
+                            "8 Task",
                             style: TextStyle(
                                 fontSize: 14,
                                 fontFamily: "Poppins",

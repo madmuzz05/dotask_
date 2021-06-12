@@ -1,4 +1,5 @@
 import 'package:dotask/screens/contains.dart';
+import 'package:dotask/screens/dashboard/dashboard.dart';
 import 'package:flutter/material.dart';
 
 class Login extends StatelessWidget {
@@ -16,20 +17,40 @@ class Login extends StatelessWidget {
               text2: "back",
             ),
             Container(
-                padding: EdgeInsets.all(20),
-                child: Column(
-                  children: [
-                    TextField(
-                      decoration: InputDecoration(
-                          prefixIcon: Icon(Icons.mail),
-                          hintText: "Email or Username"),
+              padding: EdgeInsets.all(20),
+              child: Column(
+                children: [
+                  TextField(
+                    decoration: InputDecoration(
+                        prefixIcon: Icon(Icons.mail),
+                        hintText: "Email or Username"),
+                  ),
+                  TextField(
+                    decoration: InputDecoration(
+                        prefixIcon: Icon(Icons.lock), hintText: "Password"),
+                  ),
+                  Container(
+                    margin: EdgeInsets.only(top: 100),
+                    child: ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (context) {
+                          return DashBoard();
+                        }));
+                      },
+                      child: Text('Logino Blok'),
+                      style: ElevatedButton.styleFrom(
+                          primary: Color(0xFF718355),
+                          onPrimary: Colors.white,
+                          minimumSize: Size(271, 47),
+                          elevation: 0,
+                          shape: StadiumBorder(),
+                          alignment: Alignment.center),
                     ),
-                    TextField(
-                      decoration: InputDecoration(
-                          prefixIcon: Icon(Icons.lock), hintText: "Password"),
-                    ),
-                  ],
-                )),
+                  )
+                ],
+              ),
+            ),
           ],
         ),
       ),
