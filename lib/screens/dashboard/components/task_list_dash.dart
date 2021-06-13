@@ -10,7 +10,7 @@ class TaskList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.only(left: 20, right: 20, bottom: 5, top: 5),
+      padding: EdgeInsets.only(left: 20, right: 20, bottom: 5, top: 0),
       child: SizedBox(
         width: 364,
         height: 120,

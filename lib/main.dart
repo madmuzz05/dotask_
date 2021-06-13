@@ -1,4 +1,6 @@
+import 'package:dotask/screens/dashboard/components/task_list_dash.dart';
 import 'package:dotask/screens/dashboard/dashboard.dart';
+import 'package:dotask/screens/event/event.dart';
 import 'package:dotask/screens/list/list.dart';
 import 'package:dotask/screens/login/login.dart';
 import 'package:flutter/material.dart';
@@ -14,7 +16,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Dotask',
-      home: ListTask(),
+      home: Login(),
     );
   }
 }

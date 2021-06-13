@@ -2,6 +2,7 @@ import 'package:dotask/screens/contains.dart';
 import 'package:dotask/screens/dashboard/components/bottom_nav.dart';
 import 'package:dotask/screens/dashboard/components/task_list_dash.dart';
 import 'package:dotask/screens/dashboard/components/title_sub_bab.dart';
+import 'package:dotask/screens/event/event.dart';
 import 'package:flutter/material.dart';
 import 'package:table_calendar/table_calendar.dart';
 
@@ -22,42 +23,70 @@ class ListTask extends StatelessWidget {
               text: "Date Task",
               fSize: 24,
             ),
-            TableCalendar(
-              firstDay: DateTime.utc(2010, 10, 16),
-              lastDay: DateTime.utc(2030, 3, 14),
-              focusedDay: DateTime.now(),
-              calendarFormat: _calendarFormat,
+            Container(
+              padding: EdgeInsets.symmetric(horizontal: 20),
+              child: TableCalendar(
+                firstDay: DateTime.utc(2010, 10, 16),
+                lastDay: DateTime.utc(2030, 3, 14),
+                focusedDay: DateTime.now(),
+                calendarFormat: _calendarFormat,
+              ),
             ),
-            TitleSubBab(
-              text: "Task",
-              fSize: 24,
+            Container(
+              padding: EdgeInsets.only(top: 10),
+              child: TitleSubBab(
+                text: "Task",
+                fSize: 24,
+              ),
             ),
             Expanded(
                 child: Stack(
               children: <Widget>[
-                ListView(
-                  children: <Widget>[
-                    TaskList(
-                        title: "Menyapu rumah",
-                        time: "06:30 - 06:31",
-                        category: "Home",
-                        color1: 0xFFDA1E37),
-                    TaskList(
-                        title: "Membuat donat",
-                        time: "06:31 - 07:30",
-                        category: "Home",
-                        color1: 0xFF0EAD69),
-                    TaskList(
-                        title: "Berjualan donat",
-                        time: "07:30 - 15:30",
-                        category: "Work",
-                        color1: 0xFF0EAD69),
-                    TaskList(
-                        title: "Berjualan mie ayam",
-                        time: "14:00 - 22:30",
-                        category: "Work",
-                        color1: 0xFFFF9505),
-                  ],
+                Container(
+                  height: 65,
+                  padding: EdgeInsets.only(top: 10, left: 20, bottom: 25),
+                  child: ListView(
+                    scrollDirection: Axis.horizontal,
+                    children: [
+                      FilterBtnBg(),
+                      FilterBtn(),
+                      FilterBtn(),
+                      FilterBtn(),
+                      FilterBtn(),
+                    ],
+                  ),
+                ),
+                Container(
+                  padding: EdgeInsets.only(top: 50),
+                  child: ListView(
+                    children: <Widget>[
+                      TaskList(
+                          title: "Menyapu rumah",
+                          time: "06:30 - 06:31",
+                          category: "Home",
+                          color1: 0xFFDA1E37),
+                      TaskList(
+                          title: "Membuat donat",
+                          time: "06:31 - 07:30",
+                          category: "Home",
+                          color1: 0xFF0EAD69),
+                      TaskList(
+                          title: "Berjualan donat",
+                          time: "07:30 - 15:30",
+                          category: "Work",
+                          color1: 0xFF0EAD69),
+                      TaskList(
+                          title: "Berjualan mie ayam",
+                          time: "14:00 - 22:30",
+                          category: "Work",
+                          color1: 0xFFFF9505),
+                      TaskList(
+                          title: "Berjualan mie ayam",
+                          time: "14:00 - 22:30",
+                          category: "Work",
+                          color1: 0xFFFF9505),
+                    ],
+                  ),
                 ),
                 BottomNavigation(
                   home: "assets/icons/home1.png",

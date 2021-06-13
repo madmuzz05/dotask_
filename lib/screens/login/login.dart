@@ -10,49 +10,82 @@ class Login extends StatelessWidget {
       backgroundColor: kPrimaryColor,
       body: Container(
         child: Column(
-          children: <Widget>[
+          children: [
             HeaderLogin(size: size),
             TextTitle(
               text1: "Welcome",
               text2: "back",
             ),
+            TextBox(),
             Container(
-              padding: EdgeInsets.all(20),
-              child: Column(
-                children: [
-                  TextField(
-                    decoration: InputDecoration(
-                        prefixIcon: Icon(Icons.mail),
-                        hintText: "Email or Username"),
-                  ),
-                  TextField(
-                    decoration: InputDecoration(
-                        prefixIcon: Icon(Icons.lock), hintText: "Password"),
-                  ),
-                  Container(
-                    margin: EdgeInsets.only(top: 100),
-                    child: ElevatedButton(
-                      onPressed: () {
-                        Navigator.push(context,
-                            MaterialPageRoute(builder: (context) {
-                          return DashBoard();
-                        }));
-                      },
-                      child: Text('Logino Blok'),
-                      style: ElevatedButton.styleFrom(
-                          primary: Color(0xFF718355),
-                          onPrimary: Colors.white,
-                          minimumSize: Size(271, 47),
-                          elevation: 0,
-                          shape: StadiumBorder(),
-                          alignment: Alignment.center),
-                    ),
-                  )
-                ],
+              // decoration: BoxDecoration(color: kBgColor),
+              margin: EdgeInsets.only(left: 20, right: 20, top: 80),
+              alignment: Alignment.center,
+              child: ElevatedButton(
+                onPressed: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) {
+                    return DashBoard();
+                  }));
+                },
+                child: Text("Login"),
+                style: ElevatedButton.styleFrom(
+                  primary: Color(0xFF718355),
+                  onPrimary: Colors.white,
+                  minimumSize: Size(265, 47),
+                  shape: StadiumBorder(),
+                  elevation: 0,
+                ),
               ),
             ),
           ],
         ),
+      ),
+    );
+  }
+}
+
+class TextBox extends StatelessWidget {
+  const TextBox({
+    Key key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: EdgeInsets.all(20),
+      child: Column(
+        children: [
+          Container(
+            padding: EdgeInsets.only(bottom: 10),
+            child: TextField(
+              decoration: InputDecoration(
+                  prefixIcon: Icon(Icons.mail), hintText: "Email or Username"),
+            ),
+          ),
+          Container(
+            padding: EdgeInsets.only(top: 10),
+            child: TextField(
+              decoration: InputDecoration(
+                  prefixIcon: Icon(Icons.lock), hintText: "Password"),
+            ),
+          ),
+          Container(
+            padding: EdgeInsets.only(top: 5),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: <Widget>[
+                Text(
+                  "Forgot Password?",
+                  style: TextStyle(
+                      fontFamily: "Poppins",
+                      fontSize: 12,
+                      fontWeight: FontWeight.w300,
+                      color: kBgColor),
+                ),
+              ],
+            ),
+          )
+        ],
       ),
     );
   }
