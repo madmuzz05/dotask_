@@ -58,7 +58,7 @@ class DashBoard extends StatelessWidget {
                   ],
                 ),
                 BottomNavigation(
-                  home: "assets/icons/home2.png",
+                  home: "assets/icons/home1.png",
                   list: "assets/icons/list.png",
                   user: "assets/icons/user1.png",
                   event: "assets/icons/event1.png",

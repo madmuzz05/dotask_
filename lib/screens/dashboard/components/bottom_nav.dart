@@ -2,6 +2,7 @@ import 'package:dotask/screens/contains.dart';
 import 'package:dotask/screens/dashboard/dashboard.dart';
 import 'package:dotask/screens/event/event.dart';
 import 'package:dotask/screens/list/list.dart';
+import 'package:dotask/screens/profil/profil.dart';
 import 'package:flutter/material.dart';
 
 class BottomNavigation extends StatelessWidget {
@@ -97,7 +98,7 @@ class BottomNavigation extends StatelessWidget {
                         context,
                         MaterialPageRoute(
                           builder: (context) {
-                            // return UserProfile();
+                            return Profil();
                           },
                         ),
                       );

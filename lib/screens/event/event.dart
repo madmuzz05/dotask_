@@ -65,9 +65,9 @@ class MyEvent extends StatelessWidget {
                     child: ListView(
                       scrollDirection: Axis.horizontal,
                       children: [
-                        FilterBtnBg(),
-                        FilterBtn(),
-                        FilterBtn(),
+                        FilterBtnBg(text: "All",),
+                        FilterBtn(text: "Join",),
+                        FilterBtn(text: "Not join",),
                       ],
                     ),
                   ),
@@ -87,7 +87,7 @@ class MyEvent extends StatelessWidget {
                     home: "assets/icons/home2.png",
                     list: "assets/icons/list.png",
                     user: "assets/icons/user1.png",
-                    event: "assets/icons/event1.png",
+                    event: "assets/icons/event2.png",
                   )
                 ],
               ),
@@ -100,10 +100,9 @@ class MyEvent extends StatelessWidget {
 }
 
 class FilterBtn extends StatelessWidget {
-  const FilterBtn({
-    Key key,
-  }) : super(key: key);
+  const FilterBtn({Key key, this.text}) : super(key: key);
 
+  final String text;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -112,7 +111,7 @@ class FilterBtn extends StatelessWidget {
       child: OutlinedButton(
         onPressed: () {},
         child: Text(
-          "Not Join",
+          text,
           style: TextStyle(
               color: kBgColor,
               fontFamily: "Poppins",
@@ -131,9 +130,9 @@ class FilterBtn extends StatelessWidget {
 }
 
 class FilterBtnBg extends StatelessWidget {
-  const FilterBtnBg({
-    Key key,
-  }) : super(key: key);
+  const FilterBtnBg({Key key, this.text}) : super(key: key);
+
+  final String text;
 
   @override
   Widget build(BuildContext context) {
@@ -142,7 +141,7 @@ class FilterBtnBg extends StatelessWidget {
       child: OutlinedButton(
         onPressed: () {},
         child: Text(
-          "All",
+          text,
           style: TextStyle(
               color: Colors.white,
               fontFamily: "Poppins",

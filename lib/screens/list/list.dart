@@ -48,11 +48,16 @@ class ListTask extends StatelessWidget {
                   child: ListView(
                     scrollDirection: Axis.horizontal,
                     children: [
-                      FilterBtnBg(),
-                      FilterBtn(),
-                      FilterBtn(),
-                      FilterBtn(),
-                      FilterBtn(),
+                      FilterBtnBg(
+                        text: "All",
+                      ),
+                      FilterBtn(
+                        text: "Completed",
+                      ),
+                      FilterBtn(
+                        text: "Cancelled",
+                      ),
+                      FilterBtn(text: "Bookmark"),
                     ],
                   ),
                 ),
@@ -89,8 +94,8 @@ class ListTask extends StatelessWidget {
                   ),
                 ),
                 BottomNavigation(
-                  home: "assets/icons/home1.png",
-                  list: "assets/icons/list.png",
+                  home: "assets/icons/home2.png",
+                  list: "assets/icons/list2.png",
                   user: "assets/icons/user1.png",
                   event: "assets/icons/event1.png",
                 )
